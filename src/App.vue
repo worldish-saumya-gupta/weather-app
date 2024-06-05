@@ -1,9 +1,12 @@
 <template>
 <h1>Weather App</h1>
-<form @submit.prevent="handleSearch">
-    <label>Enter City: </label>
+<form @submit.prevent="handleSearch" class="form">
+    <label class="city-name">Enter Your City</label>
+    <div>
     <input type="text" v-model="city" required>
-    <button type="submit">Search</button>
+    <button type="submit" class="btn">Search</button>
+</div>
+
 </form>
 
 <br>
@@ -135,6 +138,26 @@ h1 {
 }
 
 form input {
-    width: 50rem;
+    width: 40rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.btn{
+    margin: 2rem;
+    padding: 1rem;
+    background: black;
+    color: white;
+    border-radius: 2rem;
+}
+
+.city-name{
+    font-size: x-large;
+    font-weight: 900;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
 }
 </style>
